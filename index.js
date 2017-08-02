@@ -1,0 +1,1 @@
+let RNRandomBytes = require('react-native').NativeModules.RNRandomBytes;
