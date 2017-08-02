@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/capriza/react-native-crypto-random-bytes.git"
   },
-  "author": "Ori Harel",
+  "author": "Ori Harel <ori.harel@gmail.com> (http://github.com/oriharel)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/capriza/react-native-crypto-random-bytes/issues"
