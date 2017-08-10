@@ -22,7 +22,15 @@ export async function init(length) {
     _length = length;
     for (let i = 0; i < 10; i++) {
         let randomBytesString = await RNRandomBytes.randomBytes(length);
-        _randomBytesStrings.push(global.atob(randomBytesString));
+        try {
+            console.log('pushing random string '+randomBytesString);
+            _randomBytesStrings.push(global.atob(randomBytesString));
+        }
+        catch (ex) {
+            console.error('exc from atob '+randomBytesString, ex);
+            console.log('exc from atob stack: '+ex.stack);
+        }
+
     }
     console.log(`RNRandomBytes is initialized with ${_randomBytesStrings.length} strings`);
 }
@@ -31,6 +39,8 @@ export function randomBytes(arr) {
     console.log(`randomBytes called. Module has ${_randomBytesStrings.length} ready`);
     let nextRandomByteString = _randomBytesStrings.pop();
     addRandomBytesString();
-    arr = nextRandomByteString.split('');
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = nextRandomByteString.charCodeAt(i);
+    }
     console.log('randomBytes arr is: '+arr);
 }
