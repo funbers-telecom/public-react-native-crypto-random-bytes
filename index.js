@@ -44,3 +44,7 @@ export function randomBytes(arr) {
     }
     console.log('randomBytes arr is: '+arr);
 }
+
+export function getRandomValues(arr) {
+    randomBytes(arr);
+}
