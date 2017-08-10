@@ -1,6 +1,6 @@
 {
   "name": "react-native-crypto-random-bytes",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Random bytes for react native, without the hassle of react-native crypto",
   "main": "index.js",
   "scripts": {
