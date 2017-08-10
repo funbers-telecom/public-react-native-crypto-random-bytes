@@ -1,10 +1,19 @@
 let RNRandomBytes = require('react-native').NativeModules.RNRandomBytes;
+let base64 = require('base-64');
 let _isInitialized = false, _randomBytesStrings = [], _length;
+
+if (!global.btoa) {
+    global.btoa = base64.encode;
+}
+
+if (!global.atob) {
+    global.atob = base64.decode;
+}
 
 function addRandomBytesString(){
     RNRandomBytes.randomBytes(_length).then((randomBytesString)=>{
         console.log('pushing another random string');
-        _randomBytesStrings.push(randomBytesString);
+        _randomBytesStrings.push(global.atob(randomBytesString));
     })
 }
 
@@ -12,8 +21,8 @@ export async function init(length) {
     console.log('initializing RNRandomBytes');
     _length = length;
     for (let i = 0; i < 10; i++) {
-        let randomBytesString = await RNRandomBytes.randomBytes(length)
-        _randomBytesStrings.push(randomBytesString);
+        let randomBytesString = await RNRandomBytes.randomBytes(length);
+        _randomBytesStrings.push(global.atob(randomBytesString));
     }
     console.log(`RNRandomBytes is initialized with ${_randomBytesStrings.length} strings`);
 }

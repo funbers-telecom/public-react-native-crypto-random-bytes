@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/capriza/react-native-crypto-random-bytes/issues"
   },
-  "homepage": "https://github.com/capriza/react-native-crypto-random-bytes#readme"
+  "homepage": "https://github.com/capriza/react-native-crypto-random-bytes#readme",
+  "dependencies": {
+    "base-64": "^0.1.0"
+  }
 }
