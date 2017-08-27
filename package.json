@@ -1,22 +1,18 @@
+
 {
-  "name": "react-native-crypto-random-bytes",
-  "version": "0.2.3",
-  "description": "Random bytes for react native, without the hassle of react-native crypto",
+  "name": "react-native-random-bytes",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/capriza/react-native-crypto-random-bytes.git"
-  },
-  "author": "Ori Harel <ori.harel@gmail.com> (http://github.com/oriharel)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/capriza/react-native-crypto-random-bytes/issues"
-  },
-  "homepage": "https://github.com/capriza/react-native-crypto-random-bytes#readme",
-  "dependencies": {
-    "base-64": "^0.1.0"
+  "keywords": [
+    "react-native"
+  ],
+  "author": "",
+  "license": "",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
   }
 }
