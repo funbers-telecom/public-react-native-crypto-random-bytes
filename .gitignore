@@ -30,3 +30,4 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
       
+.idea
