@@ -1,11 +1,3 @@
-//
-//  RNRandom.m
-//  randombytes
-//
-//  Created by Mark Vayngrib on 10/13/15.
-//  Copyright (c) 2015 Facebook. All rights reserved.
-//
-
 #import "RNRandomBytes.h"
 #import "RCTBridgeModule.h"
 #import "RCTBridge.h"
@@ -17,13 +9,15 @@ RCT_EXPORT_MODULE()
 @synthesize bridge = _bridge;
 
 RCT_EXPORT_METHOD(randomBytes:(NSUInteger)length
-                  callback:(RCTResponseSenderBlock)callback)
+                  resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    callback(@[[NSNull null], [self randomBytes:length]]);
+    NSLog(@"RCT_EXPORT_METHOD randomBytes started");
+    resolve([self randomBytes:length]);
 }
 
 - (NSString *) randomBytes:(NSUInteger)length
 {
+    NSLog(@"randomBytes started");
     NSMutableData* bytes = [NSMutableData dataWithLength:length];
     SecRandomCopyBytes(kSecRandomDefault, length, [bytes mutableBytes]);
     return [bytes base64EncodedStringWithOptions:0];
