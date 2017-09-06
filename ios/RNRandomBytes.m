@@ -1,6 +1,4 @@
 #import "RNRandomBytes.h"
-#import "RCTBridgeModule.h"
-#import "RCTBridge.h"
 
 @implementation RNRandomBytes
 
