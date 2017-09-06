@@ -34,7 +34,7 @@ public class RandomBytesPackage implements ReactPackage {
     return Collections.emptyList();
   }
 
-  @Override
+  // Deprecated RN 0.47
   public List<Class<? extends JavaScriptModule>> createJSModules() {
     Log.d(LOG_TAG, "createJSModules started");
     return Collections.emptyList();
