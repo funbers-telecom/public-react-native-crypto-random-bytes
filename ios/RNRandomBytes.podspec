@@ -11,14 +11,12 @@ Pod::Spec.new do |s|
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "author@domain.cn" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/author/RNRandomBytes.git", :tag => "master" }
-  s.source_files  = "RNRandomBytes/**/*.{h,m}"
+  s.source       = { :git => "https://github.com/funbers/react-native-crypto-random-bytes.git", :tag => "master" }
+  s.source_files = "*.{h,m}"
   s.requires_arc = true
-
+  s.homepage = "https://github.com/funbers/react-native-crypto-random-bytes"
 
   s.dependency "React"
   #s.dependency "others"
 
 end
-
-  
